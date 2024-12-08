@@ -6,7 +6,6 @@
 
 @media only screen and (max-width: 700px) {
   body {
-    background-color: hsl(240, 3%, 94%);
     font-family: "DM sans", sans-serif;
     overflow-x: hidden;
     padding: 0;
@@ -21,6 +20,7 @@
     background-color: red;
     gap: 1rem;
     padding: 1rem;
+    background-color:hsl(240, 3%, 94%);
   }
 
   section {
