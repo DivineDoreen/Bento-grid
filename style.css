@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 
-
 @media (min-width: 1024px) {
-
   body {
     min-width: 100vh;
   }
@@ -15,7 +13,7 @@
     display: grid;
     width: 100vw;
     height: 100%;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: "DM Sans", Arial, sans-serif;
     justify-content: center;
     align-items: center;
     grid:
@@ -34,10 +32,10 @@
   .left {
     grid-area: left;
     display: grid;
-    grid: 
-    'section7'
-    'section8'
-    /100%;
+    grid:
+      "section7"
+      "section8"
+      /100%;
     gap: 1rem;
     width: 100%;
     height: 100vh;
@@ -260,7 +258,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-family: 'DM Sans', Arial, sans-serif;
+    font-family: "DM Sans", Arial, sans-serif;
   }
 
   .left {
