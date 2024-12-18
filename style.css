@@ -4,227 +4,242 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100%;
-}
 
-.container {
-  display: grid;
-  min-height: 100%;
-  min-width: 100%;
-  justify-content: center;
-  align-items: center;
-  grid:
-    "left right" auto
-    / 13rem 39rem;
-  gap: 1rem;
-  overflow: hidden;
-  background-color: hsl(240, 3%, 94%);
-}
+@media (min-width: 1024px) {
 
-section {
-  border-radius: 0.5rem;
-}
+  body {
+    min-width: 100vh;
+  }
 
+  .container {
+    display: grid;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid:
+      "left right" 100vh
+      / 15% 45%;
+    gap: 1rem;
+    background-color: hsl(240, 3%, 94%);
+    padding: 5rem 3rem;
+  }
 
-.left {
-  grid-area: left;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  gap: 1rem;
-  height: 100vh;
-}
+  section {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
 
-.right {
-  margin: 0;
-  padding: 0;
-  grid-area: right;
-  gap: 1rem;
-  display: grid;
-  grid:
-    "section1 section1 section4" 1fr
-    "section2 section3 section4" 1fr
-    "section6 section5 section5" 1fr
-    / 13rem 13rem 13rem;
-  height: 100vh;
-}
+  .left {
+    grid-area: left;
+    display: grid;
+    grid: 
+    'section7'
+    'section8'
+    /100%;
+    gap: 1rem;
+    width: 100%;
+    height: 100vh;
+  }
 
-.section1 {
-  display: flex;
-  flex-direction: column;
-  grid-area: section1;
-  background-color: hsl(256, 67%, 59%);
-  color: white;
-  text-align: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  justify-content: center;
-  padding: 0rem 2rem;
-}
+  .right {
+    margin: 0;
+    padding: 0;
+    grid-area: right;
+    gap: 1rem;
+    display: grid;
+    grid:
+      "section1 section1 section4" 1fr
+      "section2 section3 section4" 1fr
+      "section6 section5 section5" 1fr
+      / 33% 33% 33%;
+    max-width: 100%;
+    height: 100vh;
+  }
 
-.section1 img {
-  width: 45%;
-}
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: section1;
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.3vw;
+    line-height: 0.8;
+    text-align: center;
+    justify-content: center;
+    padding: 2vw 3vw;
+  }
 
-.section1 p {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+  .section1 img {
+    width: 11vw;
+    margin-bottom: 0.5vw;
+  }
 
-.section1 span {
-  font-size: 3.2rem;
-  color: hsl(39, 100%, 71%);
-}
+  .section1 p {
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
 
-.section2 {
-  grid-area: section2;
-  letter-spacing: -0.1rem;
-  padding: 0.7rem 1.5rem 0rem 1rem;
-  font-size: 1.8rem;
-  overflow: hidden;
-  line-height: 0.8;
-  font-weight: 500;
-  background-color: hsl(0, 0%, 100%);
-}
+  .section1 span {
+    font-size: 3.2vw;
+    color: hsl(39, 100%, 71%);
+  }
 
-.section2 img {
-  width: 16rem;
-  margin-bottom: 0.5rem;
-}
+  .section2 {
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.1rem;
+    padding: 1vw 2vw 1vw 1vw;
+    font-size: 2vw;
+    overflow: hidden;
+    line-height: 0.8;
+    font-weight: 500;
+    background-color: hsl(0, 0%, 100%);
+  }
 
-.section3 {
-  grid-area: section3;
-  background-color: hsl(39, 100%, 71%);
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  font-size: 1.9rem;
-  line-height: 0.8;
-  letter-spacing: -0.1rem;
-  overflow: hidden;
-}
+  .section2 img {
+    width: 17vw;
+    margin-bottom: 1vw;
+  }
 
-.section3 img {
-  width: 8rem;
-  height: 100%;
-  position: relative;
-  top: 1rem;
-}
+  .section3 {
+    grid-area: section3;
+    background-color: hsl(39, 100%, 71%);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 3vw 0vw 1vw;
+    font-size: 2vw;
+    line-height: 0.8;
+    letter-spacing: -0.1rem;
+    overflow: hidden;
+  }
 
-.section4 {
-  grid-area: section4;
-  display: flex;
-  flex-direction: column;
-  background-color: hsl(254, 88%, 90%);
-  font-weight: 500;
-  overflow: hidden;
-  text-align: start;
-  padding: 1.5rem 1.5rem 1.5rem 1rem;
-}
+  .section3 img {
+    width: 12vw;
+    position: relative;
+    top: 1.3vw;
+  }
 
-.section4 p {
-  font-size: 1.8rem;
-  line-height: 0.8;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  letter-spacing: -0.1rem;
-}
+  .section4 {
+    grid-area: section4;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(254, 88%, 90%);
+    font-weight: 500;
+    overflow: hidden;
+    text-align: start;
+    padding: 1.5vw;
+  }
 
-.section4 img {
-  width: 19rem;
-  margin-bottom: 1rem;
-  height: 100%;
-}
+  .section4 p {
+    font-size: 2vw;
+    align-items: flex-start;
+    line-height: 0.8;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    letter-spacing: -0.1rem;
+  }
 
-.section4 span {
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-}
+  .section4 img {
+    width: 20vw;
+    height: 60%;
+    margin-bottom: 1.5vw;
+  }
 
-.section5 {
-  grid-area: section5;
-  background-color: hsl(256, 67%, 59%);
-  padding: 1rem;
-  color: hsl(0, 0%, 100%);
-  display: flex;
-  font-size: 2.3rem;
-  letter-spacing: -0.1rem;
-  line-height: 0.9;
-  align-items: center;
-}
+  .section4 span {
+    font-size: 1.2vw;
+    line-height: 1;
+  }
 
-.section5 img {
-  width: 25rem;
-  margin-right: 1rem;
-}
+  .section5 {
+    grid-area: section5;
+    background-color: hsl(256, 67%, 59%);
+    padding: 1vw;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    font-size: 2.2vw;
+    letter-spacing: -0.1rem;
+    line-height: 0.9;
+    align-items: center;
+  }
 
-.section6 {
-  grid-area: section6;
-  background-color: hsl(0, 0%, 100%);
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .section5 img {
+    width: 12vw;
+    margin-right: 1vw;
+  }
 
-.section6 p {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
+  .section6 {
+    grid-area: section6;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.section6 span {
-  font-size: 1rem;
-}
+  .section6 p {
+    font-size: 4vw;
+    font-weight: 500;
+  }
 
-.section6 img {
-  width: 9rem;
-  margin-top: 1rem;
-}
+  .section6 span {
+    font-size: 1.3vw;
+  }
 
-.section7 {
-  display: flex;
-  flex-direction: column;
-  font-size: 2.5rem;
-  letter-spacing: -0.1rem;
-  height: 50%;
-  font-weight: 500;
-  gap: 1rem;
-  background-color: hsl(31, 66%, 93%);
-  line-height: 1.8rem;
-  justify-content: center;
-  padding: 1rem;
-  grid-area: section7
-}
+  .section6 img {
+    width: 10vw;
+    margin-top: 2vw;
+  }
 
-.section7 i {
-  color: hsl(256, 67%, 59%);
-}
+  .section7 {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.1rem;
+    height: 100%;
+    font-weight: 500;
+    gap: 1rem;
+    background-color: hsl(31, 66%, 93%);
+    justify-content: center;
+    padding: 4vw 1.5vw;
+    grid-area: section7;
+    font-size: 2.5vw;
+    line-height: 0.8;
+    flex: 1;
+  }
 
-.section7 img {
-  width: 9rem;
-}
+  .section7 i {
+    color: hsl(256, 67%, 59%);
+  }
 
-.section8 {
-  background-color: hsl(39, 100%, 71%);
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: -0.1rem;
-  padding: 1rem 2.7rem 1rem 1rem;
-  line-height: 1.7rem;
-  align-items: center;
-  font-weight: 500;
-  grid-area: section8
-}
+  .section7 img {
+    max-width: 10vw;
+    margin-top: 1vw;
+  }
 
-.section8 img {
-  width: 9rem;
-  margin-top: 1rem;
+  .section8 {
+    background-color: hsl(39, 100%, 71%);
+    font-size: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.1rem;
+    padding: 1.3vw 2vw 1.5vw 1.5vw;
+    line-height: 0.8;
+    align-items: start;
+    font-weight: 500;
+    grid-area: section8;
+    height: 100%;
+    flex: 1;
+  }
+
+  .section8 img {
+    max-width: 12vw;
+    margin-top: 1.2vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -234,15 +249,16 @@ section {
 
   .container {
     display: grid;
-    grid: 
-    'right'
-    'left';
+    grid:
+      "right"
+      "left";
     grid-template-columns: 100%;
     min-width: 100%;
     background-color: hsl(240, 3%, 94%);
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
 
   .left {
@@ -325,7 +341,7 @@ section {
 
   .section3 img {
     width: 8.5rem;
-    margin-top: 0.2rem;
+    margin-top: 1rem;
   }
 
   .section4 {
@@ -355,7 +371,7 @@ section {
 
   .section5 {
     background-color: hsl(256, 67%, 59%);
-    padding: 1rem 2.8rem;
+    padding: 1rem 2.5rem;
     text-align: center;
     align-items: center;
     color: hsl(0, 0%, 100%);
